@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A ready-to-use Grade 10 CAT Stickables challenge with mission posters, starter files, teacher notes and step-by-step instructions.">
+<title>Grade 10 CAT | The Stickables Challenge</title>
+<style>
+:root{
+  --curro-navy:#003B6F;
+  --curro-gold:#EEAF30;
+  --white:#FFFFFF;
+  --ink:#172536;
+  --muted:#5c6b7a;
+  --pale:#f3f7fb;
+  --line:#dbe5ee;
+  --red:#e31b23;
+  --green:#247a52;
+  --shadow:0 12px 32px rgba(0,59,111,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:var(--curro-navy)}
+.wrap{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--curro-navy);color:#fff;font-size:.9rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 0;flex-wrap:wrap}
+.brandmark{font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.gold-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--curro-gold);margin-right:8px}
+nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.navinner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.logo-text{font-weight:900;color:var(--curro-navy);font-size:1.05rem}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;font-weight:700;font-size:.92rem}
+.navlinks a:hover{text-decoration:underline;color:#7b5100}
+.hero{background:linear-gradient(125deg,var(--curro-navy) 0%,#07548e 72%,#0d639a 100%);color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:330px;height:330px;border:42px solid rgba(238,175,48,.24);border-radius:50%;right:-100px;top:-120px}
+.hero-inner{padding:72px 0 66px;position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center}
+.eyebrow{display:inline-block;background:var(--curro-gold);color:var(--curro-navy);font-weight:900;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+h1{font-size:clamp(2.3rem,5vw,4.5rem);line-height:1.02;margin:18px 0 20px;letter-spacing:-.04em}
+.hero p{font-size:1.12rem;max-width:650px;color:#edf5fb}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:10px;padding:13px 18px;font-weight:800;border:2px solid transparent;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-gold{background:var(--curro-gold);color:var(--curro-navy)}
+.btn-outline{border-color:#fff;color:#fff;background:transparent}
+.sticker-board{background:#fff;color:var(--curro-navy);border-radius:22px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.2);transform:rotate(2deg)}
+.sticker-board h2{margin:0 0 14px;font-size:1.1rem}
+.stickers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sticker{border:2px dashed var(--line);border-radius:14px;padding:15px 8px;text-align:center;background:var(--pale)}
+.sticker span{font-size:2rem;display:block}
+.sticker b{display:block;font-size:.85rem;margin-top:5px}
+.sticker small{color:var(--muted)}
+section{padding:64px 0}
+.section-head{max-width:740px;margin-bottom:28px}
+.kicker{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:900;color:#8a5a00}
+h2{color:var(--curro-navy);font-size:clamp(1.7rem,3vw,2.45rem);line-height:1.15;margin:8px 0 12px}
+.section-head p{color:var(--muted);margin:0}
+.notice{border-left:5px solid var(--curro-gold);background:#fff8e8;padding:16px 18px;border-radius:0 12px 12px 0;margin-top:22px}
+.mission-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.mission{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.mission-top{padding:22px;color:#fff;background:var(--curro-navy)}
+.mission:nth-child(2) .mission-top{background:#1c6a4b}
+.mission:nth-child(3) .mission-top{background:#8b5b00}
+.mission:nth-child(4) .mission-top{background:#4c5798}
+.mission-num{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:900;opacity:.9}
+.mission-top h3{font-size:1.4rem;line-height:1.2;margin:7px 0}
+.mission-top p{margin:0;color:#f3f7fb}
+.mission-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.module{font-size:.82rem;font-weight:800;color:var(--muted);margin-bottom:12px}
+.mission-body ol{padding-left:20px;margin:0 0 20px}
+.mission-body li{margin:7px 0}
+.file-link{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;background:var(--pale);border:1px solid var(--line);border-radius:10px;text-decoration:none;font-weight:800;margin-top:8px}
+.file-link:hover{background:#e8f1f8;border-color:#9eb9cf}
+.file-link span:last-child{color:#8a5a00;white-space:nowrap}
+.resources{background:var(--pale)}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.resource{padding:22px;border-radius:16px;border:1px solid var(--line);background:#fff}
+.resource .emoji{font-size:1.8rem}
+.resource h3{color:var(--curro-navy);font-size:1.08rem;margin:8px 0}
+.resource p{font-size:.94rem;color:var(--muted);margin:0 0 14px}
+.download{font-weight:900;text-decoration:none;color:var(--curro-navy);border-bottom:2px solid var(--curro-gold);padding-bottom:2px}
+.steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.step{padding:18px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.step strong{display:block;color:var(--curro-navy);margin-bottom:6px}
+.step-number{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--curro-gold);color:var(--curro-navy);font-weight:900;margin-bottom:12px}
+.assessment{background:var(--curro-navy);color:#fff}
+.assessment h2{color:#fff}
+.assessment p{color:#e5eef5}
+.assess-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.assess-card{border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:18px;background:rgba(255,255,255,.06)}
+.assess-card b{color:var(--curro-gold);display:block;font-size:1.05rem;margin-bottom:6px}
+footer{background:#082b49;color:#e7eff6;padding:28px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+footer p{margin:4px 0}
+footer strong{color:var(--curro-gold)}
+footer a{color:#fff}
+.tiny{font-size:.85rem;color:#c3d4e1}
+@media(max-width:780px){
+ .hero-inner{grid-template-columns:1fr;padding:52px 0}
+ .sticker-board{max-width:440px;transform:none}
+ .mission-grid{grid-template-columns:1fr}
+ .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .steps-grid,.assess-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .navinner{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:520px){
+ section{padding:46px 0}
+ .resource-grid,.steps-grid,.assess-grid{grid-template-columns:1fr}
+ .navlinks{gap:12px}
+ .hero-buttons .btn{width:100%}
+}
+@media print{
+ nav,.hero-buttons,.download,.file-link{display:none!important}
+ body{background:#fff}
+ .hero,.assessment{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <div><span class="gold-dot"></span>CREATIVE CLASSROOM RESOURCE</div>
+    <div>Grade 10 Computer Applications Technology</div>
+  </div>
+</div>
+<nav aria-label="Main navigation">
+  <div class="wrap navinner">
+    <div class="logo-text">THE STICKABLES CHALLENGE</div>
+    <div class="navlinks">
+      <a href="#missions">Missions</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#how-to-use">How to use</a>
+      <a href="#assessment">Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Ready-to-use Grade 10 CAT project</span>
+      <h1>Meet the missions.<br>Make it memorable.</h1>
+      <p>A fun, practical Stickables-themed CAT challenge. Learners become a creative digital team: they design a catalogue, analyse sales, pitch a promotion and build a mini website.</p>
+      <p>Designed to be easy to follow, with step-by-step instructions and downloadable starter files. Share this page with your learners or fellow teachers.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-gold" href="#downloads">⬇ Get the resources</a>
+        <a class="btn btn-outline" href="resources/Grade10_CAT_Stickables_Mission_Posters.pdf" target="_blank" rel="noopener">View mission posters ↗</a>
+      </div>
+    </div>
+    <div class="sticker-board" aria-label="Example fictional Stickables characters">
+      <h2>Build your own collection</h2>
+      <div class="stickers">
+        <div class="sticker"><span>🐢</span><b>Turbo Tortoise</b><small>Super patience</small></div>
+        <div class="sticker"><span>🐼</span><b>Pixel Panda</b><small>Creative thinking</small></div>
+        <div class="sticker"><span>🥕</span><b>Captain Carrot</b><small>Healthy choices</small></div>
+        <div class="sticker"><span>🦎</span><b>Astro Axolotl</b><small>Curiosity</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">The challenge</div>
+      <h2>One theme. Four practical missions.</h2>
+      <p>Learners work with Word, Excel, PowerPoint and basic HTML while creating their own fictional Stickables collection. They can invent characters, names, special powers and artwork.</p>
+    </div>
+    <div class="notice"><strong>For teachers:</strong> Download the resources below and share them with your class. The instructions are written in simple, direct steps to help learners work independently.</div>
+    <div class="notice"><strong>Brand note:</strong> This is an independent classroom activity inspired by the Stickables theme. It is not an official Checkers campaign and is not affiliated with or endorsed by Checkers. Use original learner-created artwork and follow your school's image-use rules.</div>
+  </div>
+</section>
+
+<section id="missions" style="background:#fbfcfe">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Your mission briefing</div>
+      <h2>Choose a mission and get started</h2>
+      <p>Each mission has a clear goal, a short list of tasks and a starter file. Work through the steps in order and save your work with your name in the filename.</p>
+    </div>
+    <div class="mission-grid">
+      <article class="mission">
+        <div class="mission-top"><div class="mission-num">Mission 01</div><h3>📄 Word: Create a Catalogue</h3><p>Turn a basic document into a neat, colourful character catalogue.</p></div>
+        <div class="mission-body">
+          <div class="module">Modules 3.1–3.7</div>
+          <ol>
+            <li>Save a copy of the starter file using your name.</li>
+            <li>Edit the text and format the headings and paragraphs.</li>
+            <li>Create a table with at least four characters.</li>
+            <li>Add at least three pictures, icons or shapes.</li>
+            <li>Check the layout and save your finished file.</li>
+          </ol>
+          <a class="file-link" href="resources/Stickables_Catalogue_Starter.docx"><span>Download Word starter</span><span>DOCX ↓</span></a>
+          <a class="file-link" href="resources/Grade10_CAT_Stickables_Challenge_Brief.docx"><span>Open full task brief</span><span>DOCX ↓</span></a>
+        </div>
+      </article>
+      <article class="mission">
+        <div class="mission-top"><div class="mission-num">Mission 02</div><h3>📊 Excel: Analyse Sales</h3><p>Use formulas and a chart to find out which characters are popular.</p></div>
+        <div class="mission-body">
+          <div class="module">Modules 4.1–4.4</div>
+          <ol>
+            <li>Save a copy of the workbook using your name.</li>
+            <li>Calculate total sales, target difference and bonus points.</li>
+            <li>Complete the summary using spreadsheet functions.</li>
+            <li>Create and title a chart comparing units sold.</li>
+            <li>Answer the questions using your results.</li>
+          </ol>
+          <a class="file-link" href="resources/Stickables_Sales_Tracker_Starter.xlsx"><span>Download Excel starter</span><span>XLSX ↓</span></a>
+          <a class="file-link" href="resources/Teacher_Quick_Start_and_Formula_Guide.docx"><span>Teacher formula guide</span><span>DOCX ↓</span></a>
+        </div>
+      </article>
+      <article class="mission">
+        <div class="mission-top"><div class="mission-num">Mission 03</div><h3>🎤 PowerPoint: Pitch It</h3><p>Present your characters and convince people why they are fun to collect.</p></div>
+        <div class="mission-body">
+          <div class="module">Module 5.1</div>
+          <ol>
+            <li>Open the four-slide starter presentation and save a copy.</li>
+            <li>Introduce three or four characters.</li>
+            <li>Add a chart and two facts from your Excel work.</li>
+            <li>Give two reasons to collect the characters.</li>
+            <li>Check the slideshow and save it.</li>
+          </ol>
+          <a class="file-link" href="resources/Stickables_PowerPoint_Starter.pptx"><span>Download PowerPoint starter</span><span>PPTX ↓</span></a>
+          <a class="file-link" href="resources/Grade10_CAT_Stickables_Simple_Instructions.docx"><span>Read step-by-step instructions</span><span>DOCX ↓</span></a>
+        </div>
+      </article>
+      <article class="mission">
+        <div class="mission-top"><div class="mission-num">Mission 04</div><h3>💻 HTML: Build a Website</h3><p>Create a simple web page to introduce your fictional collection.</p></div>
+        <div class="mission-body">
+          <div class="module">Module 5.2</div>
+          <ol>
+            <li>Open the starter file in a text editor, such as Notepad.</li>
+            <li>Change the page title and main heading.</li>
+            <li>Add two paragraphs and a list of three characters.</li>
+            <li>Add an image and keep it in the same folder as the HTML file.</li>
+            <li>Save the file and open it in a browser to test it.</li>
+          </ol>
+          <a class="file-link" href="resources/Stickables_HTML_Starter.html" download><span>Download HTML starter</span><span>HTML ↓</span></a>
+          <a class="file-link" href="resources/Grade10_CAT_Stickables_Simple_Instructions.docx"><span>Read step-by-step instructions</span><span>DOCX ↓</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="resources" id="downloads">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Teacher resource library</div>
+      <h2>Download everything you need</h2>
+      <p>Use the posters to guide learners, the starter files to reduce preparation time, and the teacher guide for lesson planning and suggested assessment.</p>
+    </div>
+    <div class="resource-grid">
+      <article class="resource"><div class="emoji">🖼️</div><h3>Mission Posters (PDF)</h3><p>Four A4 pages with numbered steps and checklists for learners.</p><a class="download" href="resources/Grade10_CAT_Stickables_Mission_Posters.pdf" target="_blank" rel="noopener">View / download posters →</a></article>
+      <article class="resource"><div class="emoji">📝</div><h3>Challenge Brief (Word)</h3><p>The main learner task brief with mission requirements and success criteria.</p><a class="download" href="resources/Grade10_CAT_Stickables_Challenge_Brief.docx">Download brief →</a></article>
+      <article class="resource"><div class="emoji">🧭</div><h3>Simple Instructions (Word)</h3><p>Editable step-by-step instructions for all four missions.</p><a class="download" href="resources/Grade10_CAT_Stickables_Simple_Instructions.docx">Download instructions →</a></article>
+      <article class="resource"><div class="emoji">📄</div><h3>Word Starter</h3><p>A document learners can edit, format and improve.</p><a class="download" href="resources/Stickables_Catalogue_Starter.docx">Download Word file →</a></article>
+      <article class="resource"><div class="emoji">📊</div><h3>Excel Starter</h3><p>Sample sales data, formula practice, a summary area and analysis questions.</p><a class="download" href="resources/Stickables_Sales_Tracker_Starter.xlsx">Download Excel file →</a></article>
+      <article class="resource"><div class="emoji">🎞️</div><h3>PowerPoint Starter</h3><p>A four-slide presentation with prompts for learners to complete.</p><a class="download" href="resources/Stickables_PowerPoint_Starter.pptx">Download PowerPoint →</a></article>
+      <article class="resource"><div class="emoji">🌐</div><h3>HTML Starter</h3><p>A basic web page learners can edit in a text editor and test in a browser.</p><a class="download" href="resources/Stickables_HTML_Starter.html" download>Download HTML file →</a></article>
+      <article class="resource"><div class="emoji">👩‍🏫</div><h3>Teacher Quick-Start Guide</h3><p>Suggested lesson flow, formula answers and a flexible 100-mark rubric.</p><a class="download" href="resources/Teacher_Quick_Start_and_Formula_Guide.docx">Download teacher guide →</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="how-to-use">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Quick start</div>
+      <h2>How to use this resource</h2>
+      <p>Keep it simple. You can run the challenge over several lessons or select the missions that fit your teaching plan.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step"><div class="step-number">1</div><strong>Download</strong>Save the mission posters and the starter files you want to use.</div>
+      <div class="step"><div class="step-number">2</div><strong>Share</strong>Post the links or files on Teams, Moodle or your school's learning platform.</div>
+      <div class="step"><div class="step-number">3</div><strong>Create</strong>Ask learners to follow the numbered steps and save their own copies.</div>
+      <div class="step"><div class="step-number">4</div><strong>Check</strong>Use the checklist and teacher guide to review the finished work.</div>
+    </div>
+    <div class="notice"><strong>Suggested pacing:</strong> Lesson 1 — Word; Lesson 2 — Excel; Lesson 3 — PowerPoint or HTML. If you need to assess every module, allow additional time for the final mission.</div>
+  </div>
+</section>
+
+<section class="assessment" id="assessment">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker" style="color:var(--curro-gold)">Assessment idea</div>
+      <h2>A flexible way to assess the project</h2>
+      <p>The included teacher guide suggests a 100-mark framework. Adapt it to your school's assessment requirements and the time available.</p>
+    </div>
+    <div class="assess-grid">
+      <div class="assess-card"><b>30 marks</b><strong>Word catalogue</strong><p>Editing, layout, graphics, table and formatting.</p></div>
+      <div class="assess-card"><b>35 marks</b><strong>Excel tracker</strong><p>Formulas, summary functions, chart and analysis.</p></div>
+      <div class="assess-card"><b>25 marks</b><strong>PowerPoint or HTML</strong><p>Clear communication, correct features and design.</p></div>
+      <div class="assess-card"><b>10 marks</b><strong>Creativity and care</strong><p>Originality, readability and file management.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <p><strong>Created by Ruval Gouws</strong></p>
+      <p class="tiny">Grade 10 Computer Applications Technology • Stickables Challenge</p>
+    </div>
+   
+  <div class="wrap tiny" style="margin-top:14px">Independent educational resource. Checkers and Stickables are referenced only as the theme for a fictional classroom activity; this resource is not an official Checkers promotion.</div>
+</footer>
+</body>
+</html>
